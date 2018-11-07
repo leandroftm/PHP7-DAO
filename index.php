@@ -11,10 +11,22 @@
 	echo json_encode($usuarios);
 	*/
 
-	$user = new Usuario();
+	//Carrega 1 usuário
+	//$user = new Usuario();
+	//$user->loadById(1);
+	//echo $user;
 
-	$user->loadById(1);
+	//Carrega uma lista de usuários
+	//$list = Usuario::getList();
+	//echo json_encode($list);
 
-	echo $user;
+	//Carrega uma lista de usuários buscando pelo login
+	//$search = Usuario::search("dm");
+	//echo json_encode($search);
+
+	//Carrega um usuãrio usando o login e a senha
+	$usuario = new Usuario();
+	$usuario->login("admin1","admin");
+	echo $usuario;
 
  ?>
